@@ -575,6 +575,11 @@ btOne.addEventListener(("click"), ()=> {
     btOne.style.backgroundColor = "#B88E2F";
     btTwo.style.backgroundColor = "#F9F1E7";
     btThree.style.backgroundColor = "#F9F1E7";
+    window.scroll({
+        top: 100,
+        left: 100,
+        behavior: "smooth",
+      });
 });
 
 btTwo.addEventListener(("click"), ()=> {
@@ -584,7 +589,11 @@ btTwo.addEventListener(("click"), ()=> {
     btOne.style.backgroundColor = "#F9F1E7";
     btTwo.style.backgroundColor = "#B88E2F";
     btThree.style.backgroundColor = "#F9F1E7";
-    window.scrollTo(0, 100)
+    window.scroll({
+        top: 100,
+        left: 100,
+        behavior: "smooth",
+      });
 });
 
 btThree.addEventListener(("click"), ()=> {
@@ -594,10 +603,14 @@ btThree.addEventListener(("click"), ()=> {
     btOne.style.backgroundColor = "#F9F1E7";
     btTwo.style.backgroundColor = "#F9F1E7";
     btThree.style.backgroundColor = "#B88E2F";
+    window.scroll({
+        top: 100,
+        left: 100,
+        behavior: "smooth",
+      });
 });
 
 btNext.addEventListener(("click"), ()=> {
-    console.log(pageNumper)
     if (pageNumper < 2) {
         pageNumper = pageNumper + 1;
         productsBox.innerHTML = "";
@@ -610,10 +623,11 @@ btNext.addEventListener(("click"), ()=> {
             btThree.style.backgroundColor = "#B88E2F";
             btTwo.style.backgroundColor = "#F9F1E7";
         }
-        console.log(pageNumper)
-    }else {
-        console.log("no");
-        console.log(pageNumper)
+        window.scroll({
+            top: 100,
+            left: 100,
+            behavior: "smooth",
+          });
     }
     
 });
