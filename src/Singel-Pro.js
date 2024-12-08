@@ -8,9 +8,12 @@ let proPriceSingel = document.querySelector(".Pro-Price");
 let plus = document.querySelector(".plus");
 let negative = document.querySelector(".negative");
 let count = document.querySelector(".count");
+let proudectNameLanding = document.querySelector(".Proudect-Name-Landing");
 
 
 let data = JSON.parse(localStorage.singelPro);
+
+proudectNameLanding.textContent = data.proName
 
 shortImg1.src = data.proImg[0];
 shortImg2.src = data.proImg[1];
