@@ -14,9 +14,9 @@ const data = [
     products: [
       {
         id: 1,
-        proImg: "./img/image 1.png",
-        proName: "Product name",
-        proDiscription: "Sort Description",
+        proImg: ["./img/image 1.png", "./img/image 3.png", "./img/image 4.png", "./img/image 1.png"],
+        proName: "Product name1",
+        proDiscription: "Sort Description1",
         proPrice: {
           price: "Fix Price",
           dicount: "30%",
@@ -26,9 +26,9 @@ const data = [
       },
       {
         id: 2,
-        proImg: "./img/image 1.png",
-        proName: "Product name",
-        proDiscription: "Sort Description",
+        proImg: ["./img/image 1.png", "./img/image 3.png", "./img/image 4.png", "./img/image 1.png"],
+        proName: "Product name2",
+        proDiscription: "Sort Description2",
         proPrice: {
           price: "Fix Price",
           dicount: "30%",
@@ -38,9 +38,9 @@ const data = [
       },
       {
         id: 3,
-        proImg: "./img/image 1.png",
-        proName: "Product name",
-        proDiscription: "Sort Description",
+        proImg: ["./img/image 1.png", "./img/image 3.png", "./img/image 4.png", "./img/image 1.png"],
+        proName: "Product name3",
+        proDiscription: "Sort Description3",
         proPrice: {
           price: "Fix Price",
           dicount: "30%",
@@ -50,9 +50,9 @@ const data = [
       },
       {
         id: 4,
-        proImg: "./img/image 1.png",
-        proName: "Product name",
-        proDiscription: "Sort Description",
+        proImg: ["./img/image 1.png", "./img/image 3.png", "./img/image 4.png", "./img/image 1.png"],
+        proName: "Product name4",
+        proDiscription: "Sort Description4",
         proPrice: {
           price: "Fix Price",
           dicount: "30%",
@@ -62,9 +62,9 @@ const data = [
       },
       {
         id: 5,
-        proImg: "./img/image 1.png",
-        proName: "Product name",
-        proDiscription: "Sort Description",
+        proImg: ["./img/image 1.png", "./img/image 3.png", "./img/image 4.png", "./img/image 1.png"],
+        proName: "Product name5",
+        proDiscription: "Sort Description5",
         proPrice: {
           price: "Fix Price",
           dicount: "30%",
@@ -74,9 +74,9 @@ const data = [
       },
       {
         id: 6,
-        proImg: "./img/image 1.png",
-        proName: "Product name",
-        proDiscription: "Sort Description",
+        proImg: ["./img/image 1.png", "./img/image 3.png", "./img/image 4.png", "./img/image 1.png"],
+        proName: "Product name6",
+        proDiscription: "Sort Description6",
         proPrice: {
           price: "Fix Price",
           dicount: "30%",
@@ -86,9 +86,9 @@ const data = [
       },
       {
         id: 7,
-        proImg: "./img/image 1.png",
-        proName: "Product name",
-        proDiscription: "Sort Description",
+        proImg: ["./img/image 1.png", "./img/image 3.png", "./img/image 4.png", "./img/image 1.png"],
+        proName: "Product name7",
+        proDiscription: "Sort Description7",
         proPrice: {
           price: "Fix Price",
           dicount: "30%",
@@ -98,9 +98,9 @@ const data = [
       },
       {
         id: 8,
-        proImg: "./img/image 1.png",
-        proName: "Product name",
-        proDiscription: "Sort Description",
+        proImg: ["./img/image 1.png", "./img/image 3.png", "./img/image 4.png", "./img/image 1.png"],
+        proName: "Product name8",
+        proDiscription: "Sort Description8",
         proPrice: {
           price: "Fix Price",
           dicount: "30%",
@@ -110,9 +110,9 @@ const data = [
       },
       {
         id: 9,
-        proImg: "./img/image 1.png",
-        proName: "Product name",
-        proDiscription: "Sort Description",
+        proImg: ["./img/image 1.png", "./img/image 3.png", "./img/image 4.png", "./img/image 1.png"],
+        proName: "Product name9",
+        proDiscription: "Sort Description9",
         proPrice: {
           price: "Fix Price",
           dicount: "30%",
@@ -122,9 +122,9 @@ const data = [
       },
       {
         id: 10,
-        proImg: "./img/image 1.png",
-        proName: "Product name",
-        proDiscription: "Sort Description",
+        proImg: ["./img/image 1.png", "./img/image 3.png", "./img/image 4.png", "./img/image 1.png"],
+        proName: "Product name10",
+        proDiscription: "Sort Description10",
         proPrice: {
           price: "Fix Price",
           dicount: "30%",
@@ -134,9 +134,9 @@ const data = [
       },
       {
         id: 11,
-        proImg: "./img/image 1.png",
-        proName: "Product name",
-        proDiscription: "Sort Description",
+        proImg: ["./img/image 1.png", "./img/image 3.png", "./img/image 4.png", "./img/image 1.png"],
+        proName: "Product name11",
+        proDiscription: "Sort Description11",
         proPrice: {
           price: "Fix Price",
           dicount: "30%",
@@ -151,7 +151,7 @@ const data = [
     products: [
       {
         id: 1,
-        proImg: "./img/image 4.png",
+        proImg: ["./img/image 1.png", "./img/image 3.png", "./img/image 4.png", "./img/image 1.png"],
         proName: "Product name",
         proDiscription: "Sort Description",
         proPrice: {
@@ -163,7 +163,7 @@ const data = [
       },
       {
         id: 2,
-        proImg: "./img/image 4.png",
+        proImg: ["./img/image 1.png", "./img/image 3.png", "./img/image 4.png", "./img/image 1.png"],
         proName: "Product name",
         proDiscription: "Sort Description",
         proPrice: {
@@ -175,7 +175,7 @@ const data = [
       },
       {
         id: 3,
-        proImg: "./img/image 4.png",
+        proImg: ["./img/image 1.png", "./img/image 3.png", "./img/image 4.png", "./img/image 1.png"],
         proName: "Product name",
         proDiscription: "Sort Description",
         proPrice: {
@@ -187,7 +187,7 @@ const data = [
       },
       {
         id: 4,
-        proImg: "./img/image 4.png",
+        proImg: ["./img/image 1.png", "./img/image 3.png", "./img/image 4.png", "./img/image 1.png"],
         proName: "Product name",
         proDiscription: "Sort Description",
         proPrice: {
@@ -199,7 +199,7 @@ const data = [
       },
       {
         id: 5,
-        proImg: "./img/image 4.png",
+        proImg: ["./img/image 1.png", "./img/image 3.png", "./img/image 4.png", "./img/image 1.png"],
         proName: "Product name",
         proDiscription: "Sort Description",
         proPrice: {
@@ -211,7 +211,7 @@ const data = [
       },
       {
         id: 6,
-        proImg: "./img/image 4.png",
+        proImg: ["./img/image 1.png", "./img/image 3.png", "./img/image 4.png", "./img/image 1.png"],
         proName: "Product name",
         proDiscription: "Sort Description",
         proPrice: {
@@ -223,7 +223,7 @@ const data = [
       },
       {
         id: 7,
-        proImg: "./img/image 4.png",
+        proImg: ["./img/image 1.png", "./img/image 3.png", "./img/image 4.png", "./img/image 1.png"],
         proName: "Product name",
         proDiscription: "Sort Description",
         proPrice: {
@@ -235,7 +235,7 @@ const data = [
       },
       {
         id: 8,
-        proImg: "./img/image 4.png",
+        proImg: ["./img/image 1.png", "./img/image 3.png", "./img/image 4.png", "./img/image 1.png"],
         proName: "Product name",
         proDiscription: "Sort Description",
         proPrice: {
@@ -247,7 +247,7 @@ const data = [
       },
       {
         id: 9,
-        proImg: "./img/image 4.png",
+        proImg: ["./img/image 1.png", "./img/image 3.png", "./img/image 4.png", "./img/image 1.png"],
         proName: "Product name",
         proDiscription: "Sort Description",
         proPrice: {
@@ -259,7 +259,7 @@ const data = [
       },
       {
         id: 10,
-        proImg: "./img/image 4.png",
+        proImg: ["./img/image 1.png", "./img/image 3.png", "./img/image 4.png", "./img/image 1.png"],
         proName: "Product name",
         proDiscription: "Sort Description",
         proPrice: {
@@ -271,7 +271,7 @@ const data = [
       },
       {
         id: 11,
-        proImg: "./img/image 4.png",
+        proImg: ["./img/image 1.png", "./img/image 3.png", "./img/image 4.png", "./img/image 1.png"],
         proName: "Product name",
         proDiscription: "Sort Description",
         proPrice: {
@@ -288,7 +288,7 @@ const data = [
     products: [
       {
         id: 1,
-        proImg: "./img/image 3.png",
+        proImg: ["./img/image 1.png", "./img/image 3.png", "./img/image 4.png", "./img/image 1.png"],
         proName: "Product name",
         proDiscription: "Sort Description",
         proPrice: {
@@ -300,7 +300,7 @@ const data = [
       },
       {
         id: 2,
-        proImg: "./img/image 3.png",
+        proImg: ["./img/image 1.png", "./img/image 3.png", "./img/image 4.png", "./img/image 1.png"],
         proName: "Product name",
         proDiscription: "Sort Description",
         proPrice: {
@@ -312,7 +312,7 @@ const data = [
       },
       {
         id: 3,
-        proImg: "./img/image 3.png",
+        proImg: ["./img/image 1.png", "./img/image 3.png", "./img/image 4.png", "./img/image 1.png"],
         proName: "Product name",
         proDiscription: "Sort Description",
         proPrice: {
@@ -324,7 +324,7 @@ const data = [
       },
       {
         id: 4,
-        proImg: "./img/image 3.png",
+        proImg: ["./img/image 1.png", "./img/image 3.png", "./img/image 4.png", "./img/image 1.png"],
         proName: "Product name",
         proDiscription: "Sort Description",
         proPrice: {
@@ -336,7 +336,7 @@ const data = [
       },
       {
         id: 5,
-        proImg: "./img/image 3.png",
+        proImg: ["./img/image 1.png", "./img/image 3.png", "./img/image 4.png", "./img/image 1.png"],
         proName: "Product name",
         proDiscription: "Sort Description",
         proPrice: {
@@ -348,7 +348,7 @@ const data = [
       },
       {
         id: 6,
-        proImg: "./img/image 3.png",
+        proImg: ["./img/image 1.png", "./img/image 3.png", "./img/image 4.png", "./img/image 1.png"],
         proName: "Product name",
         proDiscription: "Sort Description",
         proPrice: {
@@ -360,7 +360,7 @@ const data = [
       },
       {
         id: 7,
-        proImg: "./img/image 3.png",
+        proImg: ["./img/image 1.png", "./img/image 3.png", "./img/image 4.png", "./img/image 1.png"],
         proName: "Product name",
         proDiscription: "Sort Description",
         proPrice: {
@@ -372,7 +372,7 @@ const data = [
       },
       {
         id: 8,
-        proImg: "./img/image 3.png",
+        proImg: ["./img/image 1.png", "./img/image 3.png", "./img/image 4.png", "./img/image 1.png"],
         proName: "Product name",
         proDiscription: "Sort Description",
         proPrice: {
@@ -384,7 +384,7 @@ const data = [
       },
       {
         id: 9,
-        proImg: "./img/image 3.png",
+        proImg: ["./img/image 1.png", "./img/image 3.png", "./img/image 4.png", "./img/image 1.png"],
         proName: "Product name",
         proDiscription: "Sort Description",
         proPrice: {
@@ -396,7 +396,7 @@ const data = [
       },
       {
         id: 10,
-        proImg: "./img/image 3.png",
+        proImg: ["./img/image 1.png", "./img/image 3.png", "./img/image 4.png", "./img/image 1.png"],
         proName: "Product name",
         proDiscription: "Sort Description",
         proPrice: {
@@ -408,7 +408,7 @@ const data = [
       },
       {
         id: 11,
-        proImg: "./img/image 3.png",
+        proImg: ["./img/image 1.png", "./img/image 3.png", "./img/image 4.png", "./img/image 1.png"],
         proName: "Product name",
         proDiscription: "Sort Description",
         proPrice: {
@@ -441,7 +441,7 @@ function showData() {
         // img
         let img = document.createElement("img");
         img.style.cssText= "max-height: 100%; width: 100%"
-        img.src = box.proImg;
+        img.src = box.proImg[pageNumper];
         // img
         // discount
         let discount = document.createElement("div");
@@ -494,6 +494,10 @@ function showData() {
         let addCard = document.createElement("div");
         addCard.textContent = "Add Card";
         addCard.style.cssText = "font-size: 16px; background-color: white; color: #B88E2F; padding: 10px 30px";
+        addCard.addEventListener(("click"), ()=> {
+            localStorage.setItem("singelPro", JSON.stringify(box));
+            window.location = "./Singel-Pro.html"
+        })
     
         let reactIconBox = document.createElement("div");
         reactIconBox.style.cssText = "display: flex; align-items: center; gap: 10px";
@@ -541,14 +545,14 @@ function showData() {
         productsBox.append(begBox);
 
 
-        begBox.addEventListener(("click"), () => {
-           if(back.style.display == "none") {
+        frontBox.addEventListener(("mouseover"), () => {
              back.style.display = "flex"
              begBox.style.transform = "translate(0, -10px)"
-           }else {
-             back.style.display = "none"
+        });
+
+        back.addEventListener(("mouseleave") , () => {
+            back.style.display = "none"
              begBox.style.transform = "translate(0, 0)"
-           }
         })
 
         if (pageNumper > 1 ) {
