@@ -907,5 +907,9 @@ footer .footer-links-small .group ul.show {
     min-height: 52px;
     margin-top: 28px;
   }
+  .checkout-page .place-order-btn {
+    font-size: 16px;
+    padding: 10px 0;
+  }
 }
 /* End checkout page */
