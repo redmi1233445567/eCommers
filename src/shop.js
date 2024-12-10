@@ -581,7 +581,7 @@ btOne.addEventListener(("click"), ()=> {
     btThree.style.backgroundColor = "#F9F1E7";
     window.scroll({
         top: 100,
-        left: 100,
+        left: 0,
         behavior: "smooth",
       });
 });
@@ -595,7 +595,7 @@ btTwo.addEventListener(("click"), ()=> {
     btThree.style.backgroundColor = "#F9F1E7";
     window.scroll({
         top: 100,
-        left: 100,
+        left: 0,
         behavior: "smooth",
       });
 });
@@ -609,7 +609,7 @@ btThree.addEventListener(("click"), ()=> {
     btThree.style.backgroundColor = "#B88E2F";
     window.scroll({
         top: 100,
-        left: 100,
+        left: 0,
         behavior: "smooth",
       });
 });
@@ -629,7 +629,7 @@ btNext.addEventListener(("click"), ()=> {
         }
         window.scroll({
             top: 100,
-            left: 100,
+            left: 0,
             behavior: "smooth",
           });
     }
