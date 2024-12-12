@@ -105,14 +105,14 @@ body {
 .my-btn:hover::before {
   transform: translateX(0%);
 }
-.my-btn.lighter {
+.my-btn.my-light-btn {
   background-color: #fff;
   color: var(--primary-color);
 }
-.my-btn.lighter:hover {
+.my-btn.my-light-btn:hover {
   color: #fff;
 }
-.my-btn.lighter::before {
+.my-btn.my-light-btn::before {
   background-color: var(--primary-color);
 }
 .hr {
@@ -658,6 +658,10 @@ footer .footer-links-small li {
 footer .footer-links li:hover,
 footer .footer-links-small li:hover {
   transform: translateX(15px);
+  -webkit-transform: translateX(15px);
+  -moz-transform: translateX(15px);
+  -ms-transform: translateX(15px);
+  -o-transform: translateX(15px);
 }
 /* End Footer Styling */
 /* Start Cart Page */
@@ -930,10 +934,184 @@ footer .footer-links-small li:hover {
   }
 }
 /* End checkout page */
-/* Start My Sider Styling */
-.beautiful-rooms-section {
-  /* height: 1000px; */
+/* Start Our Products Section Styling */
+.our-products-section .show-more-btn {
+  padding: 11px 48px;
 }
+.our-products-section .the-products .card {
+  position: relative;
+  width: 23%;
+  background-color: #f4f5f7;
+  overflow: hidden;
+}
+.our-products-section .card .card-image {
+  position: relative;
+}
+.our-products-section .card .card-image img {
+  width: 100%;
+}
+.our-products-section .card .card-image span {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 48px;
+  height: 48px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.our-products-section .card .card-image span.the-discount {
+  background-color: #e97171;
+}
+.our-products-section .card .card-image span.new-product {
+  background-color: #2ec1ac;
+}
+.our-products-section .card .card-info {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.our-products-section .card .card-info .card-title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 28.8px;
+  color: #3a3a3a;
+}
+.our-products-section .card .card-info .card-desc {
+  font-weight: 500;
+  color: #898989;
+}
+.our-products-section .card .card-info .the-price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.our-products-section .card .card-info .the-price .price {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+  color: #3a3a3a;
+}
+.our-products-section .card .card-info .the-price .old-price {
+  color: #b0b0b0;
+}
+.our-products-section .card .add-card-and-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-direction: column;
+  width: 100%;
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.our-products-section .card:hover .add-card-and-actions {
+  top: 50%;
+}
+.our-products-section .card .add-to-card-btn {
+  border: 0;
+  padding: 10px 24px;
+}
+.our-products-section .card .actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 12px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+}
+.our-products-section .card .actions > div {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.our-products-section .card .actions .like svg.active {
+  fill: red !important;
+}
+.our-products-section .card .actions .like svg.active path {
+  stroke: red !important;
+}
+.our-products-section .card::before {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #3a3a3a;
+  opacity: 0.72;
+  z-index: 1;
+  -webkit-transition: 0.6s;
+  -moz-transition: 0.6s;
+  -ms-transition: 0.6s;
+  -o-transition: 0.6s;
+  transition: 0.6s;
+}
+.our-products-section .card:hover::before {
+  top: 0;
+}
+
+@media (max-width: 576px) {
+  .our-products-section .card .card-info {
+    gap: 8px;
+  }
+  .our-products-section .card .card-image span {
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+  }
+  .our-products-section .card .card-info .card-title {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 19.5px;
+  }
+  .our-products-section .card .card-info .card-desc,
+  .our-products-section .card .card-info .the-price {
+    font-size: 14px;
+  }
+  .our-products-section .card .card-info .the-price .price {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+@media (max-width: 768px) {
+  .our-products-section .show-more-btn {
+    padding: 10px 32px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .our-products-section .the-products .card {
+    width: 45%;
+  }
+}
+@media (max-width: 480px) {
+  .our-products-section .the-products .card {
+    width: 100%;
+  }
+}
+/* End Our Products Section Styling */
+/* Start My Sider Styling */
 .my-slider {
   width: 60%;
   position: relative;
