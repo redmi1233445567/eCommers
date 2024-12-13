@@ -1260,6 +1260,10 @@ video {
   padding-bottom: 60px;
 }
 
+.pt-\[0\] {
+  padding-top: 0;
+}
+
 .text-center {
   text-align: center;
 }
