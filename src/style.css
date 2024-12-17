@@ -931,6 +931,10 @@ video {
   max-width: 850px;
 }
 
+.max-w-\[8\] {
+  max-width: 8;
+}
+
 .flex-1 {
   flex: 1 1 0%;
 }
