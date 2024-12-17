@@ -1,6 +1,6 @@
 //Start  Handle Function addAndRemoveClassShow
 const overlay = document.querySelector(".overlay");
-const menuIcon = document.querySelector("nav .menu-icon");
+const menuIcon = document.querySelectorAll("nav .menu-icon");
 const navMenu = document.querySelector("nav .menu");
 const closeMenuIcon = document.querySelector("nav .menu .menu-header svg");
 const allSmallLinksHeaders = document.querySelectorAll(
@@ -9,17 +9,20 @@ const allSmallLinksHeaders = document.querySelectorAll(
 const allLinksUls = document.querySelectorAll(
   "footer .footer-links-small .group ul"
 );
-const shoppingCartIcon = document.querySelector(".cart-icon");
+const shoppingCartIcon = document.querySelectorAll(".cart-icon");
 const shoppingCart = document.querySelector(".shopping-cart");
 const closeShoppingCartIcon = document.querySelector(
   ".shopping-cart .menu-header svg"
 );
 
 function controlAddandRemoveClassShow(openIcon, element, closeIcon) {
-  openIcon.addEventListener("click", () => {
-    element.classList.add("show");
-    overlay.classList.add("show");
+  openIcon.forEach((icon) => {
+    icon.addEventListener("click", () => {
+      element.classList.add("show");
+      overlay.classList.add("show");
+    });
   });
+
   closeIcon.addEventListener("click", () => {
     element.classList.remove("show");
     overlay.classList.remove("show");
@@ -220,7 +223,7 @@ if (mySlider) {
 const products = [
   {
     id: 1,
-    proImg: "./img/image 1.png",
+    proImg: "../src/img/image 1.png",
     proName: "Product name1",
     proDiscription: "Sort Description1",
     proPrice: "3.500.000",
@@ -231,7 +234,7 @@ const products = [
   },
   {
     id: 2,
-    proImg: "./img/image 1.png",
+    proImg: "../src/img/image 1.png",
     proName: "Product name2",
     proDiscription: "Sort Description2",
     proPrice: "2.500.000",
@@ -241,7 +244,7 @@ const products = [
   },
   {
     id: 3,
-    proImg: "./img/image 1.png",
+    proImg: "../src/img/image 1.png",
     proName: "Product name3",
     proDiscription: "Sort Description3",
     proPrice: "7.000.000",
@@ -252,7 +255,7 @@ const products = [
   },
   {
     id: 4,
-    proImg: "./img/image 1.png",
+    proImg: "../src/img/image 1.png",
     proName: "Product name4",
     proDiscription: "Sort Description4",
     proPrice: "500.000",
@@ -262,7 +265,7 @@ const products = [
   },
   {
     id: 5,
-    proImg: "./img/image 1.png",
+    proImg: "../src/img/image 1.png",
     proName: "Product name5",
     proDiscription: "Sort Description5",
     proPrice: "1.500.000",
@@ -271,7 +274,7 @@ const products = [
   },
   {
     id: 6,
-    proImg: "./img/image 1.png",
+    proImg: "../src/img/image 1.png",
     proName: "Product name6",
     proDiscription: "Sort Description6",
     proPrice: "150.000",
@@ -281,7 +284,7 @@ const products = [
   },
   {
     id: 7,
-    proImg: "./img/image 1.png",
+    proImg: "../src/img/image 1.png",
     proName: "Product name7",
     proDiscription: "Sort Description7",
     proPrice: "7.000.000",
@@ -291,7 +294,7 @@ const products = [
   },
   {
     id: 8,
-    proImg: "./img/image 1.png",
+    proImg: "../src/img/image 1.png",
     proName: "Product name8",
     proDiscription: "Sort Description8",
     proPrice: "500.000",
