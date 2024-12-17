@@ -100,101 +100,63 @@ const sliderSContainer = document.querySelector(
 const dots = document.querySelector(".my-slider .dots");
 let currentSlide = 0;
 let numberOfSlide = 1;
-// ===================================
-// Second make slider elements and classes
-// ===================================
-for (let image of sliderImages) {
-  let slide = document.createElement("div");
-  let slideImage = document.createElement("img");
-  let slideContent = document.createElement("div");
-  let slideDesc = document.createElement("div");
-  let slideNumber = document.createElement("div");
-  let theNumber = document.createElement("div");
-  let space = document.createElement("div");
-  let bedroom = document.createElement("div");
-  let slideType = document.createElement("div");
-  let nextArrow = document.createElement("div");
-  let dot = document.createElement("div");
-  let innerDot = document.createElement("span");
-  dot.id = `slide-${numberOfSlide}`;
-  dot.className = "dot";
-  dot.appendChild(innerDot);
-  dots.appendChild(dot);
-  slide.className = "slide";
-  slide.dataset.target = `slide-${numberOfSlide}`;
-  slide.style.order = `${numberOfSlide}`;
-  slideImage.src = image;
-  slideImage.className = "slide-image";
-  slideContent.className = "slide-content";
-  slideDesc.className = "slide-desc";
-  slideNumber.className = "slide-number";
-  theNumber.className = "the-number";
-  space.className = "space";
-  slideType.className = "slide-type";
-  nextArrow.className = "next-arrow";
-  slideNumber.innerHTML = `0${numberOfSlide}`;
-  bedroom.innerHTML = "Bed Room";
-  slideType.innerHTML = "Inner Peace";
-  slideNumber.append(theNumber, space, bedroom);
-  slideDesc.append(slideNumber, slideType);
-  slideContent.append(slideDesc, nextArrow);
-  slide.append(slideImage, slideContent);
-  sliderSContainer.append(slide);
-  numberOfSlide++;
-}
-// ===================================
-// Handle Dots Pagination
-// ===================================
-const slides = document.querySelectorAll(".my-slider .slide");
-const sliderDots = document.querySelectorAll(".my-slider .dots .dot");
-// ===================================
-// Put class active on first slide by currentSlideVariable
-// ===================================
-function getActiveSlide(currentSlide) {
-  slides[currentSlide].classList.add("active");
-}
-getActiveSlide(currentSlide);
-sliderDots.forEach((dot) => {
-  // put class active on current dot
-  slides.forEach((slide) => {
-    if (slide.dataset.target === dot.id && slide.classList.contains("active")) {
-      dot.classList.add("active");
-    }
-  });
-
-  dot.addEventListener("click", () => {
-    // Link between current dot and slide
-    slides.forEach((slide, i) => {
-      if (slide.dataset.target === dot.id) {
-        slides.forEach((slide) => {
-          slide.classList.remove("active");
-        });
-        slide.classList.add("active");
-        currentSlide = i;
-      }
-    });
-    sliderDots.forEach((dot) => {
-      dot.classList.remove("active");
-    });
-    dot.classList.add("active");
-  });
-});
-// ==============================
-// Handle Next Arrow Paginater
-// ==============================
-const goNext = document.querySelector(".my-slider .right-arrow");
-goNext.addEventListener("click", () => {
-  if (currentSlide < slides.length - 1) {
-    currentSlide++;
-  } else {
-    currentSlide = 0;
+if (mySlider) {
+  // ===================================
+  // Second make slider elements and classes
+  // ===================================
+  for (let image of sliderImages) {
+    let slide = document.createElement("div");
+    let slideImage = document.createElement("img");
+    let slideContent = document.createElement("div");
+    let slideDesc = document.createElement("div");
+    let slideNumber = document.createElement("div");
+    let theNumber = document.createElement("div");
+    let space = document.createElement("div");
+    let bedroom = document.createElement("div");
+    let slideType = document.createElement("div");
+    let nextArrow = document.createElement("div");
+    let dot = document.createElement("div");
+    let innerDot = document.createElement("span");
+    dot.id = `slide-${numberOfSlide}`;
+    dot.className = "dot";
+    dot.appendChild(innerDot);
+    dots.appendChild(dot);
+    slide.className = "slide";
+    slide.dataset.target = `slide-${numberOfSlide}`;
+    slide.style.order = `${numberOfSlide}`;
+    slideImage.src = image;
+    slideImage.className = "slide-image";
+    slideContent.className = "slide-content";
+    slideDesc.className = "slide-desc";
+    slideNumber.className = "slide-number";
+    theNumber.className = "the-number";
+    space.className = "space";
+    slideType.className = "slide-type";
+    nextArrow.className = "next-arrow";
+    slideNumber.innerHTML = `0${numberOfSlide}`;
+    bedroom.innerHTML = "Bed Room";
+    slideType.innerHTML = "Inner Peace";
+    slideNumber.append(theNumber, space, bedroom);
+    slideDesc.append(slideNumber, slideType);
+    slideContent.append(slideDesc, nextArrow);
+    slide.append(slideImage, slideContent);
+    sliderSContainer.append(slide);
+    numberOfSlide++;
   }
-  slides.forEach((slide) => {
-    slide.classList.remove("active");
-  });
+  // ===================================
+  // Handle Dots Pagination
+  // ===================================
+  const slides = document.querySelectorAll(".my-slider .slide");
+  const sliderDots = document.querySelectorAll(".my-slider .dots .dot");
+  // ===================================
+  // Put class active on first slide by currentSlideVariable
+  // ===================================
+  function getActiveSlide(currentSlide) {
+    slides[currentSlide].classList.add("active");
+  }
   getActiveSlide(currentSlide);
   sliderDots.forEach((dot) => {
-    dot.classList.remove("active");
+    // put class active on current dot
     slides.forEach((slide) => {
       if (
         slide.dataset.target === dot.id &&
@@ -203,9 +165,53 @@ goNext.addEventListener("click", () => {
         dot.classList.add("active");
       }
     });
+
+    dot.addEventListener("click", () => {
+      // Link between current dot and slide
+      slides.forEach((slide, i) => {
+        if (slide.dataset.target === dot.id) {
+          slides.forEach((slide) => {
+            slide.classList.remove("active");
+          });
+          slide.classList.add("active");
+          currentSlide = i;
+        }
+      });
+      sliderDots.forEach((dot) => {
+        dot.classList.remove("active");
+      });
+      dot.classList.add("active");
+    });
   });
-});
-// End Handling My Slider
+  // ==============================
+  // Handle Next Arrow Paginater
+  // ==============================
+  const goNext = document.querySelector(".my-slider .right-arrow");
+  goNext.addEventListener("click", () => {
+    if (currentSlide < slides.length - 1) {
+      currentSlide++;
+    } else {
+      currentSlide = 0;
+    }
+    slides.forEach((slide) => {
+      slide.classList.remove("active");
+    });
+    getActiveSlide(currentSlide);
+    sliderDots.forEach((dot) => {
+      dot.classList.remove("active");
+      slides.forEach((slide) => {
+        if (
+          slide.dataset.target === dot.id &&
+          slide.classList.contains("active")
+        ) {
+          dot.classList.add("active");
+        }
+      });
+    });
+  });
+  // End Handling My Slider
+}
+
 // ================================
 // ================================
 // ================================
@@ -297,71 +303,73 @@ const products = [
 const productsContainer = document.querySelector(
   ".our-products-section .the-products"
 );
-products.forEach((product) => {
-  let card = document.createElement("div");
-  card.className = "card";
-  let cardImage = document.createElement("div");
-  cardImage.className = "card-image";
-  let image = document.createElement("img");
-  image.src = product.proImg;
-  let theDiscount = document.createElement("span");
-  let newProduct = document.createElement("span");
-  let cardInfo = document.createElement("div");
-  cardInfo.className = "card-info";
-  let cardTitle = document.createElement("h4");
-  cardTitle.className = "card-title";
-  cardTitle.innerHTML = product.proName;
-  let cardDesc = document.createElement("p");
-  cardDesc.className = "card-desc";
-  cardDesc.innerHTML = product.proDiscription;
-  let thePrice = document.createElement("div");
-  thePrice.className = "the-price";
-  let price = document.createElement("span");
-  let oldPrice = document.createElement("del");
-  price.className = "price";
-  price.innerHTML = product.proPrice;
-  if (product.proDiscount) {
-    theDiscount.className = "the-discount";
-    theDiscount.innerHTML = `${product.proDiscount}%`;
-    price.innerHTML = product.newPrice;
-    oldPrice.className = "old-price";
-    oldPrice.innerHTML = product.proPrice;
-  }
-  if (product.new) {
-    newProduct.className = "new-product";
-    newProduct.innerHTML = `New`;
-  }
-  let addCardBtnAndActions = document.createElement("div");
-  addCardBtnAndActions.className = "add-card-and-actions";
-  addCardBtnAndActions.innerHTML = `
-  <button type="button" class="add-to-card-btn my-btn my-light-btn">Add To Card</button>
-  <div class="actions">
-    <div class="share">
-      <i class="fa-solid fa-share-nodes"></i>
-      <span>Share</span>
+if (productsContainer) {
+  products.forEach((product) => {
+    let card = document.createElement("div");
+    card.className = "card";
+    let cardImage = document.createElement("div");
+    cardImage.className = "card-image";
+    let image = document.createElement("img");
+    image.src = product.proImg;
+    let theDiscount = document.createElement("span");
+    let newProduct = document.createElement("span");
+    let cardInfo = document.createElement("div");
+    cardInfo.className = "card-info";
+    let cardTitle = document.createElement("h4");
+    cardTitle.className = "card-title";
+    cardTitle.innerHTML = product.proName;
+    let cardDesc = document.createElement("p");
+    cardDesc.className = "card-desc";
+    cardDesc.innerHTML = product.proDiscription;
+    let thePrice = document.createElement("div");
+    thePrice.className = "the-price";
+    let price = document.createElement("span");
+    let oldPrice = document.createElement("del");
+    price.className = "price";
+    price.innerHTML = product.proPrice;
+    if (product.proDiscount) {
+      theDiscount.className = "the-discount";
+      theDiscount.innerHTML = `${product.proDiscount}%`;
+      price.innerHTML = product.newPrice;
+      oldPrice.className = "old-price";
+      oldPrice.innerHTML = product.proPrice;
+    }
+    if (product.new) {
+      newProduct.className = "new-product";
+      newProduct.innerHTML = `New`;
+    }
+    let addCardBtnAndActions = document.createElement("div");
+    addCardBtnAndActions.className = "add-card-and-actions";
+    addCardBtnAndActions.innerHTML = `
+    <button type="button" class="add-to-card-btn my-btn my-light-btn">Add To Card</button>
+    <div class="actions">
+      <div class="share">
+        <i class="fa-solid fa-share-nodes"></i>
+        <span>Share</span>
+      </div>
+      <div class="compare">
+        <i class="fa-solid fa-right-left"></i>
+        <span>Compare</span>
+      </div>
+      <div class="like" id="like-${product.id}">
+        <svg width="16" height="16" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8.16668 3.5C4.94551 3.5 2.33334 6.08533 2.33334 9.275C2.33334 11.8498 3.35418 17.9608 13.4027
+           24.1383C13.5827 24.2479 13.7893 24.3058 14 24.3058C14.2107 24.3058 14.4173 24.2479 14.5973
+            24.1383C24.6458 17.9608 25.6667 11.8498 25.6667 9.275C25.6667 6.08533 23.0545 3.5 19.8333
+             3.5C16.6122 3.5 14 7 14 7C14 7 11.3878 3.5 8.16668 3.5Z"
+              stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>Like</span>
+      </div>
     </div>
-    <div class="compare">
-      <i class="fa-solid fa-right-left"></i>
-      <span>Compare</span>
-    </div>
-    <div class="like" id="like-${product.id}">
-      <svg width="16" height="16" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M8.16668 3.5C4.94551 3.5 2.33334 6.08533 2.33334 9.275C2.33334 11.8498 3.35418 17.9608 13.4027
-         24.1383C13.5827 24.2479 13.7893 24.3058 14 24.3058C14.2107 24.3058 14.4173 24.2479 14.5973
-          24.1383C24.6458 17.9608 25.6667 11.8498 25.6667 9.275C25.6667 6.08533 23.0545 3.5 19.8333
-           3.5C16.6122 3.5 14 7 14 7C14 7 11.3878 3.5 8.16668 3.5Z"
-            stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-      <span>Like</span>
-    </div>
-  </div>
-  `;
-  cardImage.append(image, theDiscount, newProduct);
-  thePrice.append(price, oldPrice);
-  cardInfo.append(cardTitle, cardDesc, thePrice);
-  card.append(cardImage, cardInfo, addCardBtnAndActions);
-  productsContainer.appendChild(card);
-});
+    `;
+    cardImage.append(image, theDiscount, newProduct);
+    thePrice.append(price, oldPrice);
+    cardInfo.append(cardTitle, cardDesc, thePrice);
+    card.append(cardImage, cardInfo, addCardBtnAndActions);
+    productsContainer.appendChild(card);
+  });
+}
 // End Logic of Our Products Sectio
 const likes = document.querySelectorAll(
   ".our-products-section .card .actions .like"
