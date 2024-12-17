@@ -161,12 +161,7 @@ nav .nav-icons {
     display: none;
   }
   nav .nav-icons {
-    width: 80%;
-    margin: 24px auto 0 auto;
-    justify-content: space-evenly;
-  }
-  nav .menu-icon {
-    display: block !important;
+    display: none;
   }
 }
 @media (max-width: 576px) {
@@ -208,9 +203,16 @@ nav .nav-icons li {
   opacity: 1;
   z-index: 999;
 }
+nav .cart-icon-and-menu {
+  display: none;
+}
+@media (max-width: 768px) {
+  nav .cart-icon-and-menu {
+    display: flex;
+  }
+}
 nav .menu-icon {
   font-size: 22px;
-  display: none;
   cursor: pointer;
 }
 nav .menu,
