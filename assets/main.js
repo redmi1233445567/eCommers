@@ -9,7 +9,7 @@ const allSmallLinksHeaders = document.querySelectorAll(
 const allLinksUls = document.querySelectorAll(
   "footer .footer-links-small .group ul"
 );
-const shoppingCartIcon = document.querySelector("nav .cart-icon svg");
+const shoppingCartIcon = document.querySelector(".cart-icon");
 const shoppingCart = document.querySelector(".shopping-cart");
 const closeShoppingCartIcon = document.querySelector(
   ".shopping-cart .menu-header svg"
