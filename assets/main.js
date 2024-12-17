@@ -344,7 +344,7 @@ if (productsContainer) {
     let addCardBtnAndActions = document.createElement("div");
     addCardBtnAndActions.className = "add-card-and-actions";
     addCardBtnAndActions.innerHTML = `
-    <button type="button" class="add-to-card-btn my-btn my-light-btn">Add To Card</button>
+    <a class="add-to-card-btn my-btn my-light-btn" href="../src/Singel-Pro.html">Add To Card</a>
     <div class="actions">
       <div class="share">
         <i class="fa-solid fa-share-nodes"></i>
