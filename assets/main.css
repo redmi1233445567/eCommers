@@ -126,6 +126,7 @@ body {
 nav {
   padding: 28px 60px 28px 54px;
   flex-wrap: wrap;
+  overflow: hidden;
 }
 nav .logo {
   align-items: center;
