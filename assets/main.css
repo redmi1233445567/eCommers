@@ -223,7 +223,6 @@ nav .menu,
   background-color: #fff;
   position: absolute;
   top: 0;
-  right: 0;
   height: 100vh;
   z-index: 1000;
   padding-top: 18px;
@@ -235,6 +234,7 @@ nav .menu,
 .shopping-cart {
   width: 417px;
   padding: 24px;
+  right: -160%;
 }
 nav .menu.show,
 .shopping-cart.show {
