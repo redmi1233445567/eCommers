@@ -229,7 +229,7 @@ nav .menu,
   font-size: 20px;
   transition: var(--primary-transition);
   right: -130%;
-  display: none;
+  /* display: none; */
 }
 .shopping-cart {
   width: 417px;
@@ -237,7 +237,7 @@ nav .menu,
 }
 nav .menu.show,
 .shopping-cart.show {
-  display: flex;
+  /* display: flex; */
   right: 0;
 }
 
