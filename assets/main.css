@@ -237,8 +237,8 @@ nav .menu,
 }
 nav .menu.show,
 .shopping-cart.show {
-  right: 0;
   display: flex;
+  right: 0;
 }
 
 nav .menu .menu-header,
@@ -1123,10 +1123,12 @@ footer .footer-links-small li:hover {
 }
 .my-slider .sliders-container {
   display: flex;
+  overflow: hidden;
   gap: 16px;
 }
 .my-slider .slide {
   position: relative;
+  overflow: hidden;
   /* transition: var(--primary-transition); */
 }
 .my-slider .slide.active {
@@ -1145,7 +1147,6 @@ footer .footer-links-small li:hover {
   top: 0;
   left: 0;
   z-index: 1;
-  /* transition: var(--primary-transition); */
 }
 .my-slider .slide .slide-image {
   max-width: 372px;
