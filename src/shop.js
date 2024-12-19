@@ -659,12 +659,12 @@ function showData() {
     // add to back
 
     let addCard = document.createElement("div");
-    addCard.textContent = "Add Card";
+    addCard.textContent = "Add To Card";
     addCard.style.cssText =
       "font-size: 16px; background-color: white; color: #B88E2F; padding: 10px 30px";
     addCard.addEventListener("click", () => {
       localStorage.setItem("singelPro", JSON.stringify(box));
-      window.location = "./singel-pro.html";
+      window.location = "./Singel-Pro.html";
     });
 
     let reactIconBox = document.createElement("div");
