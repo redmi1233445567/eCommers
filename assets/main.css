@@ -1117,19 +1117,24 @@ footer .footer-links-small li:hover {
 }
 /* End Our Products Section Styling */
 /* Start My Sider Styling */
-.my-slider {
-  width: 60%;
+.beautiful-rooms-section {
   position: relative;
+}
+.beautiful-rooms-section > div {
+  padding-left: 150px;
+  align-items: center;
+}
+.my-slider {
+  width: 95%;
+  overflow: hidden;
 }
 .my-slider .sliders-container {
   display: flex;
-  overflow: hidden;
   gap: 16px;
 }
 .my-slider .slide {
   position: relative;
   overflow: hidden;
-  /* transition: var(--primary-transition); */
 }
 .my-slider .slide.active {
   order: 0 !important;
@@ -1215,8 +1220,8 @@ footer .footer-links-small li:hover {
   align-items: center;
   gap: 16px;
   position: absolute;
-  bottom: 0;
-  right: 22%;
+  bottom: 10%;
+  right: 18%;
   z-index: 20;
 }
 .my-slider .dots .dot {
@@ -1268,11 +1273,58 @@ footer .footer-links-small li:hover {
   font-size: 18px;
 }
 /* End My Sider Styling */
+@media (max-width: 1300px) {
+  .my-slider .dots {
+    right: 9%;
+  }
+}
+@media (max-width: 1280px) {
+  .beautiful-rooms-section > div {
+    flex-direction: column;
+    padding-left: 0;
+  }
+  .my-slider {
+    padding-left: 60px;
+  }
+  .beautiful-rooms-section > div .section-header .section-desc {
+    padding: 0;
+  }
+  .beautiful-rooms-section .my-slider {
+    width: 100%;
+  }
+}
+@media (max-width: 1280px) and (min-width: 1024px) {
+  .my-slider .dots {
+    bottom: 17%;
+    right: 37%;
+  }
+}
+@media (max-width: 1024px) {
+  .my-slider .dots {
+    bottom: 17%;
+    right: 30%;
+  }
+}
+@media (max-width: 992px) {
+  .my-slider .dots {
+    bottom: 17%;
+    right: 25%;
+  }
+}
+@media (max-width: 850px) {
+  .my-slider .dots {
+    bottom: 17%;
+    right: 17%;
+  }
+}
 @media (max-width: 768px) {
+  .my-slider {
+    padding-left: 20px;
+  }
   .my-slider .dots {
     left: 50%;
     transform: translateX(-50%);
-    bottom: -9%;
+    bottom: 12.5%;
     width: 100%;
     justify-content: center;
   }
@@ -1281,19 +1333,18 @@ footer .footer-links-small li:hover {
     margin-top: 60px;
   }
 }
-@media (max-width: 1280px) and (min-width: 1024px) {
-  .my-slider .dots {
-    right: 40%;
-  }
-}
-@media (max-width: 1280px) {
-  .beautiful-rooms-section .container {
-    flex-direction: column;
-  }
-  .beautiful-rooms-section .container .section-header .section-desc {
-    padding: 0;
-  }
-  .beautiful-rooms-section .my-slider {
+
+@media (max-width: 576px) {
+  .my-slider .slide {
     width: 100%;
+  }
+  .my-slider .slide .slide-image {
+    max-width: 332px;
+    height: 446px;
+    transition: 0.5s;
+  }
+  .my-slider .slide.active .slide-image {
+    max-width: 350px !important;
+    height: 530px !important;
   }
 }
